@@ -7,6 +7,6 @@ We release our Auto-labeling car shape data for KITTI with COCO formate. Each ca
 ```python
 # we add 2D/3D keypoints in KITTI car instance annotations
 additional_instance_label: 
-    'keypoints': list # 668 * 3 (u, v, visiblity),
-    'p3d': list # 668 * 3 (x, y, z in model local coordinate)
+    'keypoints_2D': list # 668 * 3 (u, v, visiblity),
+    'keypoints_3D': list # 668 * 3 (x, y, z in model local coordinate)
 ```
