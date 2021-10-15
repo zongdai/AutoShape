@@ -1,0 +1,117 @@
+==> torch version: 1.0.0
+==> cudnn version: 7401
+==> Cmd:
+['/home/beta/Baidu_Projects/baidu/personal-code/AutoShape/src/main.py', '--data_dir', './kitti_format', '--exp_id', 'AutoShape_dla34_trainval_stereoaug_pc48_adaptive', '--arch', 'dla_34', '--batch_size', '1', '--master_batch_size', '1', '--lr', '1.25e-4']
+==> Opt:
+  K: 100
+  aggr_weight: 0.0
+  agnostic_ex: False
+  arch: dla_34
+  aug_ddd: 0.5
+  aug_rot: 0
+  batch_size: 1
+  calib_dir: 
+  cat_spec_wh: False
+  center_thresh: 0.1
+  chunk_sizes: [1]
+  coor_thresh: 0.3
+  data_dir: ./kitti_format/data
+  dataset: kitti
+  debug: 0
+  debug_dir: ./kitti_format/exp/AutoShape_dla34_trainval_stereoaug_pc48_adaptive/debug
+  debugger_theme: white
+  demo: 
+  dense_hp: False
+  dense_wh: False
+  dim_weight: 2
+  distribute: False
+  down_ratio: 4
+  eval_oracle_dep: False
+  eval_oracle_hm: False
+  eval_oracle_hmhp: False
+  eval_oracle_hp_offset: False
+  eval_oracle_kps: False
+  eval_oracle_offset: False
+  eval_oracle_wh: False
+  exp_dir: ./kitti_format/exp
+  exp_id: AutoShape_dla34_trainval_stereoaug_pc48_adaptive
+  exp_rampup: 100
+  fix_res: True
+  flip: 0.5
+  flip_idx: [[0, 1], [2, 3], [4, 5], [6, 7]]
+  flip_test: False
+  gpus: [0]
+  gpus_str: 0
+  head_conv: 256
+  heads: {'hm': 3, 'wh': 2, 'hps': 114, 'rot': 8, 'dim': 3, 'p3d': 171, 'adaptive_weights': 114, 'prob': 1, 'reg': 2, 'hm_hp': 57, 'hp_offset': 2}
+  hide_data_time: False
+  hm_hp: True
+  hm_hp_weight: 1
+  hm_weight: 1
+  hp_weight: 1
+  input_h: 384
+  input_images: 
+  input_res: 1280
+  input_w: 1280
+  is_use_corner: True
+  keep_res: False
+  kitti_split: 3dop
+  load_model: 
+  logger_save: 0
+  lr: 0.000125
+  lr_step: [90, 120]
+  master_batch_size: 1
+  mean: [[[0.485 0.456 0.406]]]
+  metric: loss
+  mse_loss: False
+  nms: False
+  no_color_aug: False
+  norm_wh: False
+  not_cuda_benchmark: False
+  not_hm_hp: False
+  not_prefetch_test: False
+  not_rand_crop: False
+  not_reg_bbox: False
+  not_reg_hp_offset: False
+  not_reg_offset: False
+  num_classes: 3
+  num_epochs: 140
+  num_iters: -1
+  num_joints: 57
+  num_stacks: 1
+  num_workers: 4
+  off_weight: 1
+  output_h: 96
+  output_res: 320
+  output_w: 320
+  pad: 31
+  peak_thresh: 0.2
+  print_iter: 1
+  prob_weight: 1
+  rect_mask: False
+  reg_bbox: True
+  reg_hp_offset: True
+  reg_loss: l1
+  reg_offset: True
+  results_dir: ./kitti_format/exp/results
+  resume: False
+  root_dir: /home/beta/Baidu_Projects/baidu/personal-code/AutoShape/src/lib/../..
+  rot_weight: 0.2
+  rotate: 0
+  sample_pc: 48
+  save_all: False
+  save_dir: ./kitti_format/exp/AutoShape_dla34_trainval_stereoaug_pc48_adaptive
+  scale: 0.4
+  scores_thresh: 0.1
+  seed: 317
+  shift: 0.1
+  std: [[[0.229 0.224 0.225]]]
+  stereo_aug: False
+  task: my3dtask
+  test: False
+  test_scales: [1.0]
+  trainval: False
+  val_intervals: 5
+  vis: False
+  vis_thresh: 0.4
+  wh_weight: 0.1

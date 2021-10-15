@@ -1,0 +1,1 @@
+from .autoshape_predictor import AutoShapePredictor

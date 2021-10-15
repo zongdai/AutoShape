@@ -1,0 +1,144 @@
+
+# path
+data_dir: 'kitti_data'
+
+num_class: 1
+num_keypoints: 41
+
+# input/output size
+input_w: 1280
+input_h: 384
+output_h: 96
+output_w: 320
+max_objs: 32
+
+# data augment
+scale: 0.4
+shift: 0.1
+not_rand_crop: False
+
+# train
+exp_rampup_epoch: 10
+hm_weight: 1.0
+off_weight: 1.0
+wh_weight: 1.0
+hp_weight: 1.0
+dim_weight: 1.0
+rot_weight: 0.2
+max_epoch: 20
+batch_size: 2
+log_iters: 5
+save_interval: 5
+keep_checkpoint_max: 5
+save_dir: 'output'
+num_workers: 2
+#Namespace(K=100,
+#aggr_weight=0.0,
+#agnostic_ex=False,
+#arch='dla_34',
+#aug_ddd=0.5,
+#aug_rot=0,
+#batch_size=32,
+#calib_dir='/home/beta/SKP/data/Kitti3D/test/calib_test/calib',
+#cat_spec_wh=False,
+#center_thresh=0.1,
+#chunk_sizes=[32],
+#coor_thresh=0.3,
+#data_dir='../kitti_format/data',
+#dataset='nuscenes_hp',
+#debug=0,
+#debug_dir='../kitti_format/exp/default/debug',
+#debugger_theme='white',
+#demo='../kitti_format/data/kitti/test.txt',
+#dense_hp=False,
+#dense_wh=False,
+#dim_weight=2,
+#distribute=False,
+#down_ratio=4,
+#eval_oracle_dep=False,
+#eval_oracle_hm=False,
+#eval_oracle_hmhp=False,
+#eval_oracle_hp_offset=False,
+#eval_oracle_kps=False,
+#eval_oracle_offset=False,
+#eval_oracle_wh=False,
+#exp_dir='../kitti_format/exp',
+#exp_id='default',
+#fix_res=True,
+#flip=0.5,
+#flip_idx=[[0, 1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17], [18, 19], [20, 21], [22, 23], [24, 25], [26, 27], [28, 29], [30, 31], [32, 33], [34, 35], [36, 37], [38, 39]],
+#flip_test=False,
+#gpus=[0],
+#gpus_str='0',
+#head_conv=256,
+#heads={'hm': 1, 'wh': 2, 'hps': 82, 'rot': 8, 'dim': 3, 'p3d': 123, 'adaptive_weights': 82, 'prob': 1, 'reg': 2, 'hm_hp': 41, 'hp_offset': 2},
+#hide_data_time=False,
+#hm_hp=True,
+#hm_hp_weight=1,
+#hm_weight=1,
+#hp_weight=1,
+#input_h=896,
+#input_res=1600,
+#input_w=1600,
+#is_use_corner=True,
+#keep_res=False,
+#kitti_split='3dop',
+#load_model='../kitti_format/nuscene_32pc_epoch13.pth',
+#  logger_save=0, lr=0.000125, lr_step=[100, 150],
+#  master_batch_size=32, mean=[0.485, 0.456, 0.406],
+#  metric='loss',
+#  mse_loss=False,
+#  nms=False,
+#  no_color_aug=False,
+#  norm_wh=False,
+#  not_cuda_benchmark=False,
+#  not_hm_hp=False,
+#  not_prefetch_test=False,
+#  not_rand_crop=False,
+#  not_reg_bbox=False,
+#  not_reg_hp_offset=False,
+#  not_reg_offset=False,
+#  num_classes=10,
+#  num_epochs=140,
+#  num_iters=-1,
+#  num_joints=41,
+#  num_stacks=1,
+#  num_workers=4,
+#  off_weight=1,
+#  output_h=224,
+#  output_res=400,
+#  output_w=400,
+#  pad=31,
+#  peak_thresh=0.2,
+#  print_iter=1,
+#  prob_weight=1,
+#  rect_mask=False,
+#  reg_bbox=True,
+#  reg_hp_offset=True,
+#  reg_loss='l1',
+#  reg_offset=True,
+#  results_dir='../kitti_format/exp/results',
+#  resume=False,
+#  root_dir='/home/beta/Baidu_Projects/baidu/personal-code/Densekeypoint_Centernet/src/lib/../..',
+#  rot_weight=0.2,
+#  rotate=0,
+#  sample_pc=32,
+#  save_all=False,
+#  save_dir='../kitti_format/exp/default',
+#  scale=0.4,
+#  scores_thresh=0.1,
+#  seed=317,
+#  shift=0.1,
+#  std=[0.229, 0.224, 0.225],
+#  stereo_aug=False,
+#  task='my3dtask',
+#  test=False,
+#  test_scales=[1.0],
+#  trainval=False,
+#  val_intervals=5,
+#  vis=False,
+#  vis_thresh=0.3,
+#  wh_weight=0.1)
+# heads {'hm': 10, 'wh': 2, 'hps': 82, 'rot': 8, 'dim': 3, 'p3d': 123, 'adaptive_weights': 82, 'prob': 1, 'reg': 2}
+# Namespace(K=100, aggr_weight=0.0, agnostic_ex=False, arch='dla_34', aug_ddd=0.5, aug_rot=0, batch_size=16, calib_dir='', cat_spec_wh=False, center_thresh=0.1, chunk_sizes=[2, 2, 2, 2, 2, 2, 2, 2], coor_thresh=0.3, data_dir='./nuscene_format/data', dataset='nuscenes', debug=0, debug_dir='./nuscene_format/exp/Autoshape_nuscene_train_pc32_adaptive/debug', debugger_theme='white', demo='', dense_hp=False, dense_wh=False, dim_weight=2, distribute=False, down_ratio=4, eval_oracle_dep=False, eval_oracle_hm=False, eval_oracle_hmhp=False, eval_oracle_hp_offset=False, eval_oracle_kps=False, eval_oracle_offset=False, eval_oracle_wh=False, exp_dir='./nuscene_format/exp', exp_id='Autoshape_nuscene_train_pc32_adaptive', fix_res=True, flip=0.5, flip_idx=[[0, 1], [2, 3], [4, 5], [6, 7]], flip_test=False, gpus=[0, 1, 2, 3, 4, 5, 6, 7], gpus_str='0,1,2,3,4,5,6,7', head_conv=256, heads={'hm': 10, 'wh': 2, 'hps': 82, 'rot': 8, 'dim': 3, 'p3d': 123, 'adaptive_weights': 82, 'prob': 1, 'reg': 2}, hide_data_time=False, hm_hp=False, hm_hp_weight=1, hm_weight=1, hp_weight=1, input_h=896, input_res=1600, input_w=1600, is_use_corner=True, keep_res=False, kitti_split='3dop', load_model='', logger_save=0, lr=0.000125, lr_step=[15, 25], master_batch_size=2, mean=array([[[0.485, 0.456, 0.406]]], dtype=float32), metric='loss', mse_loss=False, nms=False, no_color_aug=False, norm_wh=False, not_cuda_benchmark=False, not_hm_hp=True, not_prefetch_test=False, not_rand_crop=True, not_reg_bbox=False, not_reg_hp_offset=False, not_reg_offset=False, num_classes=10, num_epochs=30, num_iters=-1, num_joints=41, num_stacks=1, num_workers=16, off_weight=1, output_h=224, output_res=400, output_w=400, pad=31, peak_thresh=0.2, print_iter=1, prob_weight=1, rect_mask=False, reg_bbox=True, reg_hp_offset=False, reg_loss='l1', reg_offset=True, results_dir='./nuscene_format/exp/results', resume=False, root_dir='/root/paddlejob/workspace/liuzongdai/baidu/personal-code/Densekeypoint_Centernet/src/lib/../..', rot_weight=0.2, rotate=0, sample_pc=32, save_all=False, save_dir='./nuscene_format/exp/Autoshape_nuscene_train_pc32_adaptive', scale=0.4, scores_thresh=0.1, seed=317, shift=0.1, std=array([[[0.229, 0.224, 0.225]]], dtype=float32), stereo_aug=False, task='my3dtask', test=False, test_scales=[1.0], trainval=False, val_intervals=5, vis=False, vis_thresh=0.3, wh_weight=0.1)
+# Namespace(K=100, aggr_weight=0.0, agnostic_ex=False, arch='dla_34', aug_ddd=0.5, aug_rot=0, batch_size=16, calib_dir='', cat_spec_wh=False, center_thresh=0.1, chunk_sizes=[2, 2, 2, 2, 2, 2, 2, 2], coor_thresh=0.3, data_dir='./nuscene_format/data', dataset='nuscenes', debug=0, debug_dir='./nuscene_format/exp/Autoshape_nuscene_train_pc32_adaptive/debug', debugger_theme='white', demo='', dense_hp=False, dense_wh=False, dim_weight=2, distribute=False, down_ratio=4, eval_oracle_dep=False, eval_oracle_hm=False, eval_oracle_hmhp=False, eval_oracle_hp_offset=False, eval_oracle_kps=False, eval_oracle_offset=False, eval_oracle_wh=False, exp_dir='./nuscene_format/exp', exp_id='Autoshape_nuscene_train_pc32_adaptive', fix_res=True, flip=0.5, flip_idx=[[0, 1], [2, 3], [4, 5], [6, 7]], flip_test=False, gpus=[0, 1, 2, 3, 4, 5, 6, 7], gpus_str='0,1,2,3,4,5,6,7', head_conv=256, heads={'hm': 10, 'wh': 2, 'hps': 82, 'rot': 8, 'dim': 3, 'p3d': 123, 'adaptive_weights': 82, 'prob': 1, 'reg': 2}, hide_data_time=False, hm_hp=False, hm_hp_weight=1, hm_weight=1, hp_weight=1, input_h=896, input_res=1600, input_w=1600, is_use_corner=True, keep_res=False, kitti_split='3dop', load_model='', logger_save=0, lr=0.000125, lr_step=[15, 25], master_batch_size=2, mean=array([[[0.485, 0.456, 0.406]]], dtype=float32), metric='loss', mse_loss=False, nms=False, no_color_aug=False, norm_wh=False, not_cuda_benchmark=False, not_hm_hp=True, not_prefetch_test=False, not_rand_crop=True, not_reg_bbox=False, not_reg_hp_offset=False, not_reg_offset=False, num_classes=10, num_epochs=30, num_iters=-1, num_joints=41, num_stacks=1, num_workers=16, off_weight=1, output_h=224, output_res=400, output_w=400, pad=31, peak_thresh=0.2, print_iter=1, prob_weight=1, rect_mask=False, reg_bbox=True, reg_hp_offset=False, reg_loss='l1', reg_offset=True, results_dir='./nuscene_format/exp/results', resume=False, root_dir='/root/paddlejob/workspace/liuzongdai/baidu/personal-code/Densekeypoint_Centernet/src/lib/../..', rot_weight=0.2, rotate=0, sample_pc=32, save_all=False, save_dir='./nuscene_format/exp/Autoshape_nuscene_train_pc32_adaptive', scale=0.4, scores_thresh=0.1, seed=317, shift=0.1, std=array([[[0.229, 0.224, 0.225]]], dtype=float32), stereo_aug=False, task='my3dtask', test=False, test_scales=[1.0], trainval=False, val_intervals=5, vis=False, vis_thresh=0.3, wh_weight=0.1)
