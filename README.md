@@ -35,10 +35,13 @@ pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
 pip install -r requirement.txt
 ```
 ## Pytorch Implement
+### Requirements
+*   Ubuntu 18.04
+*   Python 3.6
 ### Install
 1. Install pytorch1.0.0:
     ~~~
-    conda install pytorch=1.0.0 torchvision -c pytorch
+    conda install pytorch=1.0.0 torchvision==0.2.1 cuda100 -c pytorch
     ~~~
 2. Install the requirements
     ~~~
