@@ -54,7 +54,7 @@ pip install -r requirement.txt
     cd DCNv2
     ./make.sh
     ~~~
-4. Compile iou3d (from [pointRCNN](https://github.com/sshaoshuai/PointRCNN)). GCC>4.9, I have tested it with GCC 5.4.0 and GCC 4.9.4, both of them are ok. 
+4. Compile iou3d (from [pointRCNN](https://github.com/sshaoshuai/PointRCNN)).
     ~~~
     cd $AutoShape_ROOT/pytorch/src/lib/utiles/iou3d
     python setup.py install
